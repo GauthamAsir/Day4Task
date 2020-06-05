@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Day4Task1</string>
+    <string name="modern_dashboard">Modern Dashboard</string>
+    <string name="ladoo">Ladoo</string>
+    <string name="chikki">Chikki</string>
+    <string name="rasgulla">Rasgulla</string>
+    <string name="cham_cham">Cham-Cham</string>
+    <string name="barfi">Barfi</string>
+    <string name="gulab_jamun">Gulab Jamun</string>
+    <string name="mysore_pak">Mysore pak</string>
+    <string name="mawa_peda">Mawa Peda</string>
+    <string name="counter">Counter</string>
+    <string name="add">Add</string>
+    <string name="day_1_counter_app">Day 4: Navigation</string>
+    <string name="_0">0</string>
+</resources>

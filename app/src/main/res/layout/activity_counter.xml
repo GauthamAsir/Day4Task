@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Counter">
+
+    <TextView
+        android:id="@+id/counter_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:padding="12dp"
+        android:textSize="21sp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"/>
+
+    <Button
+        android:id="@+id/increase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/counter_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:textColor="@android:color/white"
+        android:text="@string/add"
+        android:drawableEnd="@android:drawable/ic_menu_add"
+        android:drawableTint="@android:color/white"
+        android:textAllCaps="false"
+        tools:targetApi="m" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/day_1_counter_app"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_margin="12dp"
+        android:textAllCaps="false"/>
+
+</RelativeLayout>
