@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".Counter">
 
+    <ImageView
+        android:id="@+id/sweet_img"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
     <TextView
         android:id="@+id/counter_tv"
         android:layout_width="match_parent"
@@ -13,7 +20,8 @@
         android:text="@string/_0"
         android:padding="12dp"
         android:textSize="21sp"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/sweet_img"
+        android:layout_marginTop="50dp"
         android:textAlignment="center"
         android:textColor="?android:textColorPrimary"/>
 

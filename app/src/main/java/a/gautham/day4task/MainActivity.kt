@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -26,32 +27,47 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val ladoo : ImageView = findViewById(R.id.ladoo)
-        val chikki : ImageView = findViewById(R.id.chikki)
-        val rasgulla : ImageView = findViewById(R.id.rasgulla)
-        val chamCham : ImageView = findViewById(R.id.cham_cham)
-        val barfi : ImageView = findViewById(R.id.barfi)
-        val gulabJamun : ImageView = findViewById(R.id.gulab_jamun)
-        val mysorePak : ImageView = findViewById(R.id.mysore_pak)
-        val mawaPeda : ImageView = findViewById(R.id.mawa_peda)
-
         loadImage(imagesArray[0], ladoo)
         loadImage(imagesArray[1], chikki)
         loadImage(imagesArray[2], rasgulla)
-        loadImage(imagesArray[3], chamCham)
+        loadImage(imagesArray[3], cham_cham)
         loadImage(imagesArray[4], barfi)
-        loadImage(imagesArray[5], gulabJamun)
-        loadImage(imagesArray[6], mysorePak)
-        loadImage(imagesArray[7], mawaPeda)
+        loadImage(imagesArray[5], gulab_jamun)
+        loadImage(imagesArray[6], mysore_pak)
+        loadImage(imagesArray[7], mawa_peda)
 
-        ladoo.setOnClickListener(this)
-        chikki.setOnClickListener(this)
-        rasgulla.setOnClickListener(this)
-        chamCham.setOnClickListener(this)
-        barfi.setOnClickListener(this)
-        gulabJamun.setOnClickListener(this)
-        mysorePak.setOnClickListener(this)
-        mawaPeda.setOnClickListener(this)
+        ladoo.setOnClickListener{
+            startActivity(Intent(this,Counter::class.java)
+                .putExtra("img",imagesArray[0]))
+        }
+        chikki.setOnClickListener{
+            startActivity(Intent(this,Counter::class.java)
+                .putExtra("img",imagesArray[1]))
+        }
+        rasgulla.setOnClickListener{
+            startActivity(Intent(this,Counter::class.java)
+                .putExtra("img",imagesArray[2]))
+        }
+        cham_cham.setOnClickListener{
+            startActivity(Intent(this,Counter::class.java)
+                .putExtra("img",imagesArray[3]))
+        }
+        barfi.setOnClickListener{
+            startActivity(Intent(this,Counter::class.java)
+                .putExtra("img",imagesArray[4]))
+        }
+        gulab_jamun.setOnClickListener{
+            startActivity(Intent(this,Counter::class.java)
+                .putExtra("img",imagesArray[5]))
+        }
+        mysore_pak.setOnClickListener{
+            startActivity(Intent(this,Counter::class.java)
+                .putExtra("img",imagesArray[6]))
+        }
+        mawa_peda.setOnClickListener{
+            startActivity(Intent(this,Counter::class.java)
+                .putExtra("img",imagesArray[7]))
+        }
 
         val toast = Toast.makeText(applicationContext, "Click on image to navigate to counter activity", Toast.LENGTH_LONG)
         toast.setGravity(Gravity.CENTER, 0, 0)
@@ -64,7 +80,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        startActivity(Intent(this,Counter::class.java))
+        startActivity(Intent(this,Counter::class.java).putExtra("img","Img"))
     }
 
 }
