@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/sweet_image"
         android:src="@mipmap/ic_launcher"/>
 
     <TextView
